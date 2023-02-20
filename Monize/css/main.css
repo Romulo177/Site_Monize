@@ -1,62 +1,52 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 body{
     background-color: #f3f3f3;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.8em;
 }
-footer{
-    padding: 1em;
-    height: 300px;
-    background: #000000;
-}
-.footer-title{
-    text-align: center;
-}
-.footer-texto{
-    color: #A9A9A9;
-    padding: 0.5em;
-    text-align: center;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 32px;
-    display: inline;
-}
-.footer-icon{
-    display: inline;
 
-}
-.localiza{
-    color: #A9A9A9;
-    font-size: 24px;
-    display: inline;
-
-}
-.img-footer{
-    padding-top: 0.5em;
-    display: block;
-    margin: 0px auto;
-    width: 80px;
-}
-.credito{
-    text-align: center;
-    position: relative;
-    bottom: 0px;
-}
-.credito a{
-    color: #A9A9A9;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-}
 .sombra{
     text-shadow: 2px 2px 4px black;
 }
+.margem-maior{
+    padding-bottom: 1em;
+}
 .navbar{
     border-bottom: solid 2px #32CD32;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 1em;
+    transition: 1;
+    display: none;
+}
+.navbar-ativo{
+    border-bottom: solid 2px #32CD32;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em;
+    transition: 1;
 }
 .imagem-navbar{
     width: 80px;
+}
+.titulo-navbar{
+    color: #000000ab;
+    padding-top: 0.3em;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 36px;
+}
+.botao-toggler{
+    background: #FFFFFF;
+    border: solid 1px #000000;
+    transition: 1;
 }
 #offcanvasNavbar{
     --bs-offcanvas-zindex: 1045;
@@ -69,10 +59,16 @@ footer{
     --bs-offcanvas-border-width: 1px;
     --bs-offcanvas-border-color: var(--bs-border-color-translucent);
     --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);}
+.bi-x{
+    position: absolute;
+    right: 0;
+}
 .offcanvas-title{
+    padding-top: 38px;
     font-weight: 1000;
     text-align: justify;
     font-size: 2em;
+    text-align: center;
 }
 .offcanvas p{
     font-weight: 400;
@@ -93,16 +89,7 @@ footer{
     right: 30%;
     width: 40%;
 }
-.titulo-navbar{
-    color: #000000ab;
-    padding-top: 0.3em;
-    text-align: center;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 38px;
-}
 #myCarousel{
-    margin-top: 140px;
     background: #e2ecec;
 
 }
@@ -113,15 +100,99 @@ footer{
 .carousel-item {
     font-size: 2em;
     height: 418px;
-  }
-.slide-3{
-    background-image: url("https://photos.app.goo.gl/7B49pt3JNkiZwR7cA");
 }
 .imagem-slide{
     position: absolute;
     bottom: 0px;
     right: 0px;
     height: 512px;
+}
+.botao-inicio {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #f3f3f3;
+    --bs-btn-bg: #8b2340;
+    --bs-btn-border-color: #f3f3f3;
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: #8b2340;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: #8b2340;
+    --bs-btn-focus-shadow-rgb: none;
+    --bs-btn-active-color: #8b2340;
+    --bs-btn-active-border-color: #8b2340;
+}
+
+.container-app{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border: solid 3px #8b2340;
+    border-radius: 32px;
+    z-index: 100;
+    width: 90vw;
+    position: fixed;
+    right: 1000vw;
+    top: 80px;
+    padding: 2vw;
+    transition: 1;
+}
+.container-app-ativo{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border: solid 3px #8b2340;
+    border-radius: 32px;
+    z-index: 100;
+    width: 90vw;
+    position: fixed;
+    right: 5%;
+    top: 80px;
+    padding: 2vw;
+    transition: 1;
+}
+.botao-fechar{
+    grid-column: span 2;
+    justify-self: end;
+}
+.container-baixar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.texto-app{
+    font-weight: 700;
+    font-size: 3.5em;
+    text-align: center;
+    grid-column: span 2;
+    padding: 6px;
+    margin-top: 1.5em;
+}
+.botaoApp{
+    background-color: #000000;
+    border-radius: 8px;
+    border: solid 2px #f3f3f3;
+    padding: 1em;
+    margin: 2em;
+    width: 90%;
+    height: 108px;
+}
+.botaoApp a{
+    color: #f3f3f3;
+    text-decoration: none;
+    font-size: 2em;
+}
+.img-app{
+    padding: 16px;
+    position: relative;
+    text-align: end;
+    grid-column: span 2;
+    height: 55vh;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+
 }
 .call{
     border-top: solid 5px #32CD32;
@@ -166,31 +237,18 @@ footer{
     font-size: 1.4em;
     text-align: justify;
 }
-.margem-maior{
-    padding-bottom: 1em;
-}
 .apresentacao img{
     position:relative;
     margin-top: 2em;
     width: 400px;
     border-radius: 1em;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
 }
 .servicos{
     padding-top: 10em;
     background-color: #f3f3f3;
-}
-.imagens{
-    border: solid #32CD32;
-    border-radius: 1em;
-    text-align: center;
-    margin-top: 5em;
-    padding: 1em;
-    background-color: #DCDCDC;
-}
-.imagens img{
-    margin: 0.8em;
-    border: solid #000000;
-    border-radius: 1em;
 }
 .servicos h1{
     text-align: center;
@@ -210,22 +268,29 @@ footer{
     list-style: none;
     padding: 1em;
 
+}
+.container-questionarios-ativo{
+    font-family: Gloock;
+    padding: 180px 60px 220px;
+    background-color: #5a00c7;
+    color: #fff;
+    font-size: 90px;
+    line-height: 90px;
+    text-align: center;
+    border: solid #000000 4px;
     
 }
-.botao-verde {
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: #f3f3f3;
-    --bs-btn-bg: #32cd32;
-    --bs-btn-border-color: #f3f3f3;
-    --bs-btn-border-radius: .5rem;
-    --bs-btn-hover-color: #32cd32;
-    --bs-btn-hover-bg: none;
-    --bs-btn-hover-border-color: #32cd32;
-    --bs-btn-focus-shadow-rgb: none;
-    --bs-btn-active-color: #32cd32;
-    --bs-btn-active-border-color: #32cd32;
-
-  }
+.container-questionarios-ativo ul{
+    margin: 164px 32px 0px;
+}
+.link-questionario{
+    padding: 12px;
+    font-size: 64px;
+    font-family: Roboto;
+    display: block;
+    color: #fff;
+    text-align: start;
+}
 #redesocial{
     padding-top: 6em;
 }
@@ -235,6 +300,7 @@ footer{
     font-size: 2em;
     padding: 1.5em;
     font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5;
 }
 .contato{
     position: relative;
@@ -243,6 +309,7 @@ footer{
     margin-bottom: 3em;
     border-radius: 1em;
     border: solid 4px #32CD32;
+    width: 600px;
 }
 .redesocial:link {
     text-decoration:none;
@@ -269,4 +336,263 @@ footer{
 .instagram{
     background: rgb(131,58,180);
     background: linear-gradient(270deg, rgba(131,58,180,1) 10%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
+}
+footer{
+    padding: 1em;
+    height: 300px;
+    background: #000000;
+}
+.footer-title{
+    text-align: center;
+}
+.footer-icon{
+    display: inline;
+
+}
+.footer-texto{
+    color: #A9A9A9;
+    padding: 0.5em;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 32px;
+    display: inline;
+}
+.localiza{
+    color: #A9A9A9;
+    font-size: 24px;
+    display: inline;
+
+}
+.img-footer{
+    padding-top: 0.5em;
+    display: block;
+    margin: 0px auto;
+    width: 80px;
+}
+.credito{
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+}
+.credito a{
+    color: #A9A9A9;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+@media screen and (min-width: 1440px) {
+    .container-app{
+        background-color: #f3f3f3;
+        border: solid 3px #8b2340;
+        border-radius: 32px;
+        z-index: 100;
+        width: 90vw;
+        display: inline-block;
+        height: 90vh;
+        position: fixed;
+        right: 100vw;
+        padding: 2vw;
+        transition: 0.25;
+    }
+    .container-app-ativo{
+        background-color: #f3f3f3;
+        border: solid 3px #8b2340;
+        border-radius: 32px;
+        z-index: 100;
+        width: 90vw;
+        display: inline-block;
+        height: 90vh;
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        padding: 2vw;
+        transition: 0.25;
+    }
+    .flex-app{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 32px;
+    }
+    .botao-fechar{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .container-baixar{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 50%;
+    }
+    .texto-app{
+        font-weight: 700;
+        font-size: 3.5em;
+        text-align: center;
+        grid-column: span 2;
+        padding: 6px;
+        margin-top: 1.5em;
+    }
+    .botaoApp{
+        background-color: #000000;
+        border-radius: 8px;
+        border: solid 2px #f3f3f3;
+        padding: none;
+        width: 90%;
+        height: 90px;
+    }
+    .botaoApp a{
+        color: #f3f3f3;
+        text-decoration: none;
+        font-size: 1em;
+    }
+    .botaoApp:hover{
+        background-color: #f3f3f3;
+        border: solid 2px #000000;
+    }
+    .botaoApp:hover a{
+        color: #000000;
+        text-decoration: none;
+        font-size: 1em;
+    }
+    .img-app{
+        position: relative;
+        min-width: 380px;
+        min-height: 540px;
+    }
+    .container-questionarios-ativo{
+        color: #5a00c7;
+    }
+    .container-questionarios-ativo{
+        font-family: Gloock;
+        padding: 100px 100px 100px;
+        background-color: #5a00c7;
+        color: #fff;
+        font-size: 82px;
+        line-height:74px;
+        text-align: center;
+        border: solid #000000 4px;
+        
+    }
+    .container-questionarios-ativo ul{
+        margin: 80px 0px 0px;
+    }
+    .link-questionario{
+        padding: 12px 0px;
+        font-size: 48px;
+        font-family: Roboto;
+        display: block;
+        color: #fff;
+        text-align: start;
+        text-decoration: none;
+    }
+    .link-questionario:hover{
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+@media screen and (max-height: 600px) {
+    .container-app{
+        background-color: #f3f3f3;
+        border: solid 3px #8b2340;
+        border-radius: 32px;
+        z-index: 100;
+        width: 90vw;
+        display: inline-block;
+        height: 90vh;
+        position: fixed;
+        right: 100vw;
+        top: 5%;
+        padding: 2vw;
+        transition: 0.25;
+    }
+    .container-app-ativo{
+        background-color: #f3f3f3;
+        border: solid 3px #8b2340;
+        border-radius: 32px;
+        z-index: 100;
+        width: 90vw;
+        display: inline-block;
+        height: 90vh;
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        padding: 2vw;
+        transition: 0.25;
+    }
+    .flex-app{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .botao-fechar{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .container-baixar{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 50%;
+    }
+    .texto-app{
+        font-weight: 700;
+        font-size: 2em;
+        text-align: center;
+        grid-column: span 2;
+        padding: 6px;
+        margin-top: 1.5em;
+    }
+    .botaoApp{
+        background-color: #000000;
+        border-radius: 8px;
+        border: solid 2px #f3f3f3;
+        padding: none;
+        width: 90%;
+        height: 90px;
+    }
+    .botaoApp a{
+        color: #f3f3f3;
+        text-decoration: none;
+        font-size: 1em;
+    }
+    .botaoApp:hover{
+        background-color: #f3f3f3;
+        border: solid 2px #000000;
+    }
+    .botaoApp:hover a{
+        color: #000000;
+        text-decoration: none;
+        font-size: 1em;
+    }
+    .img-app{
+        position: relative;
+        min-width: 260px;
+        min-height: 370px;
+
+    }
+    .container-questionarios-ativo{
+        font-family: Gloock;
+        padding: 60px 80px 60px;
+        background-color: #5a00c7;
+        color: #fff;
+        font-size: 48px;
+        line-height:48px;
+        text-align: center;
+        border: solid #000000 4px;
+        
+    }
+    .container-questionarios-ativo ul{
+        margin: 80px 0px 0px;
+    }
+    .link-questionario{
+        padding: 12px 0px;
+        font-size: 32px;
+        font-family: Roboto;
+        display: block;
+        color: #fff;
+        text-align: start;
+    }
+
 }
